@@ -1,6 +1,17 @@
+@use "variables";
+
 * {
-  font-family: "Nunito", sans-serif;
+  font-family: variables.$font-family;
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+  & ::selection {
+    background: variables.$medium-light-red;
+    color: varibles.$white;
+  }
 }

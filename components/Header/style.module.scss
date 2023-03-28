@@ -1,0 +1,32 @@
+@use "../../styles/variables.scss";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: variables.$white;
+  padding: 2rem 9%;
+  box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  & .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: variables.$medium-dark-gray;
+    & svg {
+      color: variables.$medium-light-red;
+      margin-right: 5rem;
+    }
+  }
+  & .navbar a {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: variables.$medium-dark-gray;
+    &:hover {
+      color: variables.$medium-light-red;
+    }
+  }
+}

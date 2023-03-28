@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Nunito } from "next/font/google";
+import Header from "@/components/Header";
 
 const nunito = Nunito({
   weight: ["200", "300", "400", "600", "700"],
@@ -16,6 +17,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
       <main></main>
     </>
   );

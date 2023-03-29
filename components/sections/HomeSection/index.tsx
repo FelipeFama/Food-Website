@@ -1,6 +1,7 @@
 import Image from "next/image";
 import homeImg from "../../../assets/home-img.png";
 import styles from "./style.module.scss";
+import ButtonComponent from "@/components/ButtonComponent";
 
 const home = {
   homeImage: {
@@ -20,9 +21,7 @@ export default function HomeSection() {
           voluptatum. Natus obcaecati unde porro nostrum ipsam itaque impedit
           incidunt rem quisquam eos!
         </p>
-        <a href="#" className={styles.btn}>
-          order now
-        </a>
+        <ButtonComponent />
       </article>
 
       <figure className={styles.image}>

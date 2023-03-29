@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "@/components/Header";
-import HomeSection from "@/components/HomeSection";
+import Layout from "@/components/sections";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <Header />
       <main>
-        <HomeSection />
+        <Layout />
       </main>
     </>
   );

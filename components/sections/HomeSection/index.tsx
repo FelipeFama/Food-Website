@@ -1,5 +1,5 @@
 import Image from "next/image";
-import homeImg from "../../assets/home-img.png";
+import homeImg from "../../../assets/home-img.png";
 import styles from "./style.module.scss";
 
 const home = {

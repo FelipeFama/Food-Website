@@ -10,7 +10,7 @@
   text-decoration: none;
   text-transform: capitalize;
   transition: all 0.2s linear;
-  & ::selection {
+  &::selection {
     background: variables.$medium-light-red;
     color: variables.$white;
   }

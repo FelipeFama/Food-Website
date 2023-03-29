@@ -1,4 +1,4 @@
-@use "../../styles/variables.scss";
+@use "../../../styles/variables.scss";
 
 .home {
   display: flex;
@@ -6,7 +6,7 @@
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
-  background: url(../../assets/home-bg.jpg) no-repeat;
+  background: url(../../../assets/home-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   & .content {

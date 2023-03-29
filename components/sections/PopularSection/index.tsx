@@ -50,7 +50,7 @@ export default function PopularSection() {
             alt={popularFoodImages.popularBurgerImage.alt}
           />
           <h3>tasty burger</h3>
-          <div className={styles.star}>
+          <div className={styles.stars}>
             <FaStar></FaStar>
             <FaStar></FaStar>
             <FaStar></FaStar>
@@ -70,7 +70,7 @@ export default function PopularSection() {
             alt={popularFoodImages.popularCakeImage.alt}
           />
           <h3>tasty cakes</h3>
-          <div className={styles.star}>
+          <div className={styles.stars}>
             <FaStar></FaStar>
             <FaStar></FaStar>
             <FaStar></FaStar>
@@ -90,7 +90,7 @@ export default function PopularSection() {
             alt={popularFoodImages.popularSweetImage.alt}
           />
           <h3>tasty sweets</h3>
-          <div className={styles.star}>
+          <div className={styles.stars}>
             <FaStar></FaStar>
             <FaStar></FaStar>
             <FaStar></FaStar>
@@ -110,7 +110,7 @@ export default function PopularSection() {
             alt={popularFoodImages.popularCupcakesImage.alt}
           />
           <h3>tasty cupcakes</h3>
-          <div className={styles.star}>
+          <div className={styles.stars}>
             <FaStar></FaStar>
             <FaStar></FaStar>
             <FaStar></FaStar>
@@ -150,7 +150,7 @@ export default function PopularSection() {
             alt={popularFoodImages.popularIceCreamImage.alt}
           />
           <h3>cold ice-cream</h3>
-          <div className={styles.star}>
+          <div className={styles.stars}>
             <FaStar></FaStar>
             <FaStar></FaStar>
             <FaStar></FaStar>

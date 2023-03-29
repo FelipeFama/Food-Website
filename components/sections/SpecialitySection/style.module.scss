@@ -3,16 +3,6 @@
 .speciality {
   display: flex;
   flex-direction: column;
-  & .heading {
-    text-align: center;
-    font-size: 3.5rem;
-    padding: 1rem;
-    color: variables.$medium-dark-gray;
-    & span {
-      color: variables.$medium-light-red;
-      margin-left: 1rem;
-    }
-  }
   & .boxContainer {
     display: flex;
     flex-wrap: wrap;

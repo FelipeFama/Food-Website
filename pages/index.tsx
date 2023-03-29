@@ -1,12 +1,6 @@
 import Head from "next/head";
-import { Nunito } from "next/font/google";
 import Header from "@/components/Header";
-
-const nunito = Nunito({
-  weight: ["200", "300", "400", "600", "700"],
-  display: "swap",
-  subsets: ["latin"],
-});
+import HomeSection from "@/components/HomeSection";
 
 export default function Home() {
   return (
@@ -18,7 +12,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main></main>
+      <main>
+        <HomeSection />
+      </main>
     </>
   );
 }

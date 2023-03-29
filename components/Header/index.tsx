@@ -1,5 +1,4 @@
 import { FaUtensils } from "react-icons/fa";
-
 import styles from "./style.module.scss";
 
 export default function Header() {

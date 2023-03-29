@@ -53,12 +53,12 @@
     background: variables.$medium-light-red;
     transition: 0.3s linear;
     z-index: -1;
-    &:hover {
-      width: 100%;
-      left: 0;
-    }
   }
   &:hover {
     color: variables.$white;
+    &::before {
+      width: 100%;
+      left: 0;
+    }
   }
 }

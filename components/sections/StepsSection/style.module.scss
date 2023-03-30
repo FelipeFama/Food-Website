@@ -1,1 +1,37 @@
 @use "../../../styles/variables.scss";
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  & .heading {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+    color: variables.$medium-dark-gray;
+    & span {
+      color: variables.$medium-light-red;
+      margin-left: 1rem;
+    }
+  }
+  & .stepsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem;
+    & .box {
+      flex: 1 1 25rem;
+      padding: 1rem;
+      text-align: center;
+      & img {
+        border-radius: 50%;
+        border: 1rem solid variables.$white;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      }
+      & h3 {
+        font-size: 3rem;
+        color: variables.$dark-chacoal;
+        padding: 1rem;
+      }
+    }
+  }
+}

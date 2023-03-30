@@ -27,12 +27,12 @@ const stepImages = {
 
 export default function StepsSection() {
   return (
-    <section className={styles.stepContainer}>
+    <section className={styles.steps}>
       <h1 className={styles.heading}>
         how it <span>works</span>
       </h1>
 
-      <div className={styles.steps}>
+      <div className={styles.stepsContainer}>
         <div className={styles.box}>
           <Image
             src={stepImages.foodSteepImage.source}

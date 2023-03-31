@@ -74,7 +74,7 @@ export default function SpecialitySection() {
         our<span>speciality</span>
       </h1>
       <div className={styles.boxContainer}>
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             className={styles.image}
             src={specialityFoodImages.burgerImage.source}
@@ -92,9 +92,9 @@ export default function SpecialitySection() {
               doloribus deleniti.
             </p>
           </div>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             className={styles.image}
             src={specialityFoodImages.pizzaImage.source}
@@ -112,9 +112,9 @@ export default function SpecialitySection() {
               doloribus deleniti.
             </p>
           </div>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             className={styles.image}
             src={specialityFoodImages.iceCreamImage.source}
@@ -132,9 +132,9 @@ export default function SpecialitySection() {
               doloribus deleniti.
             </p>
           </div>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             className={styles.image}
             src={specialityFoodImages.drinksImage.source}
@@ -152,9 +152,9 @@ export default function SpecialitySection() {
               doloribus deleniti.
             </p>
           </div>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             className={styles.image}
             src={specialityFoodImages.sweetImage.source}
@@ -172,9 +172,9 @@ export default function SpecialitySection() {
               doloribus deleniti.
             </p>
           </div>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             className={styles.image}
             src={specialityFoodImages.breakfastImage.source}
@@ -192,7 +192,7 @@ export default function SpecialitySection() {
               doloribus deleniti.
             </p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
   );

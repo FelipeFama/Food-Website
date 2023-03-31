@@ -33,37 +33,37 @@ export default function StepsSection() {
       </h1>
 
       <div className={styles.stepsContainer}>
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={stepImages.foodSteepImage.source}
             alt={stepImages.foodSteepImage.alt}
           />
           <h3>choose your favorite food</h3>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={stepImages.deliverySteepImage.source}
             alt={stepImages.deliverySteepImage.alt}
           />
           <h3>free and fast delivery</h3>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={stepImages.paymentsSteepImage.source}
             alt={stepImages.paymentsSteepImage.alt}
           />
           <h3>easy payments methods</h3>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={stepImages.finallySteepImage.source}
             alt={stepImages.finallySteepImage.alt}
           />
           <h3>and finally, enjoy your food</h3>
-        </div>
+        </article>
       </div>
     </section>
   );

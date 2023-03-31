@@ -44,7 +44,7 @@ export default function PopularSection() {
         most<span>popular</span>foods
       </h1>
       <div className={styles.boxContainer}>
-        <div className={styles.box}>
+        <article className={styles.box}>
           <span className={styles.price}>$5 - $20</span>
           <Image
             src={popularFoodImages.popularBurgerImage.source}
@@ -60,9 +60,9 @@ export default function PopularSection() {
             <FaRegStar></FaRegStar>
           </div>
           <ButtonComponent />
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <span className={styles.price}>$5 - $20</span>
           <Image
             src={popularFoodImages.popularCakeImage.source}
@@ -78,9 +78,9 @@ export default function PopularSection() {
             <FaRegStar></FaRegStar>
           </div>
           <ButtonComponent />
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <span className={styles.price}>$5 - $20</span>
           <Image
             src={popularFoodImages.popularSweetImage.source}
@@ -96,9 +96,9 @@ export default function PopularSection() {
             <FaRegStar></FaRegStar>
           </div>
           <ButtonComponent />
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <span className={styles.price}>$5 - $20</span>
           <Image
             src={popularFoodImages.popularCupcakesImage.source}
@@ -114,9 +114,9 @@ export default function PopularSection() {
             <FaRegStar></FaRegStar>
           </div>
           <ButtonComponent />
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <span className={styles.price}>$5 - $20</span>
           <Image
             src={popularFoodImages.popularDrinksImage.source}
@@ -132,9 +132,9 @@ export default function PopularSection() {
             <FaRegStar></FaRegStar>
           </div>
           <ButtonComponent />
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <span className={styles.price}>$5 - $20</span>
           <Image
             src={popularFoodImages.popularIceCreamImage.source}
@@ -150,7 +150,7 @@ export default function PopularSection() {
             <FaRegStar></FaRegStar>
           </div>
           <ButtonComponent />
-        </div>
+        </article>
       </div>
     </section>
   );

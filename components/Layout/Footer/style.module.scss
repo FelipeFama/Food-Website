@@ -1,6 +1,7 @@
 @use "../../../styles/variables.scss";
 
 .footer {
+  padding: 2rem 9%;
   background: variables.$black;
   text-align: center;
   & button {

@@ -35,8 +35,8 @@ export default function OrderSection() {
           <textarea
             className={styles.textarea}
             placeholder="address"
-            name=""
-            id=""
+            name="address"
+            id="address"
             cols={30}
             rows={10}
           />

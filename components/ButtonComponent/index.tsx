@@ -5,10 +5,10 @@ interface Props {
   children: String;
 }
 
-export default function ButtonComponent({ children, ...props }: Props) {
+export default function ButtonComponent({ children }: Props) {
   return (
     <>
-      <button type="submit" className={styles.btn} {...props}>
+      <button type="submit" className={styles.btn}>
         {children}
       </button>
     </>

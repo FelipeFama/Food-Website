@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./style.module.scss";
-import ButtonComponent from "../../ButtonSections";
+import ButtonComponent from "../../buttons/ButtonSections";
 
 export default function Footer() {
   return (

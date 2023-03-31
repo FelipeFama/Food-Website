@@ -1,7 +1,7 @@
 import Image from "next/image";
 import homeImg from "../../../assets/home-img.png";
 import styles from "./style.module.scss";
-import ButtonComponent from "@/components/ButtonSections";
+import ButtonComponent from "@/components/buttons/ButtonSections";
 
 const home = {
   homeImage: {

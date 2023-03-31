@@ -40,8 +40,7 @@ export default function OrderSection() {
             cols={30}
             rows={10}
           />
-
-          <ButtonComponent />
+          <ButtonComponent>Order Now</ButtonComponent>
         </form>
       </div>
     </section>

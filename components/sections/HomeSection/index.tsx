@@ -21,7 +21,7 @@ export default function HomeSection() {
           voluptatum. Natus obcaecati unde porro nostrum ipsam itaque impedit
           incidunt rem quisquam eos!
         </p>
-        <ButtonComponent />
+        <ButtonComponent>Order Now</ButtonComponent>
       </article>
 
       <figure className={styles.image}>

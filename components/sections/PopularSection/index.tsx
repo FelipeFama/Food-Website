@@ -59,7 +59,7 @@ export default function PopularSection() {
             <FaStar></FaStar>
             <FaRegStar></FaRegStar>
           </div>
-          <ButtonComponent />
+          <ButtonComponent>Order Now</ButtonComponent>
         </article>
 
         <article className={styles.box}>
@@ -77,7 +77,7 @@ export default function PopularSection() {
             <FaStar></FaStar>
             <FaRegStar></FaRegStar>
           </div>
-          <ButtonComponent />
+          <ButtonComponent>Order Now</ButtonComponent>
         </article>
 
         <article className={styles.box}>
@@ -95,7 +95,7 @@ export default function PopularSection() {
             <FaStar></FaStar>
             <FaRegStar></FaRegStar>
           </div>
-          <ButtonComponent />
+          <ButtonComponent>Order Now</ButtonComponent>
         </article>
 
         <article className={styles.box}>
@@ -113,7 +113,7 @@ export default function PopularSection() {
             <FaStar></FaStar>
             <FaRegStar></FaRegStar>
           </div>
-          <ButtonComponent />
+          <ButtonComponent>Order Now</ButtonComponent>
         </article>
 
         <article className={styles.box}>
@@ -131,7 +131,7 @@ export default function PopularSection() {
             <FaStar></FaStar>
             <FaRegStar></FaRegStar>
           </div>
-          <ButtonComponent />
+          <ButtonComponent>Order Now</ButtonComponent>
         </article>
 
         <article className={styles.box}>
@@ -149,7 +149,7 @@ export default function PopularSection() {
             <FaStar></FaStar>
             <FaRegStar></FaRegStar>
           </div>
-          <ButtonComponent />
+          <ButtonComponent>Order Now</ButtonComponent>
         </article>
       </div>
     </section>

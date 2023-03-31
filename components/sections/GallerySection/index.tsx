@@ -66,7 +66,7 @@ export default function GallerySection() {
           <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <ButtonComponent />
+            <ButtonComponent>Order Now</ButtonComponent>
           </div>
         </article>
 
@@ -78,7 +78,7 @@ export default function GallerySection() {
           <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <ButtonComponent />
+            <ButtonComponent>Order Now</ButtonComponent>
           </div>
         </article>
 
@@ -90,7 +90,7 @@ export default function GallerySection() {
           <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <ButtonComponent />
+            <ButtonComponent>Order Now</ButtonComponent>
           </div>
         </article>
 
@@ -102,7 +102,7 @@ export default function GallerySection() {
           <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <ButtonComponent />
+            <ButtonComponent>Order Now</ButtonComponent>
           </div>
         </article>
 
@@ -114,7 +114,7 @@ export default function GallerySection() {
           <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <ButtonComponent />
+            <ButtonComponent>Order Now</ButtonComponent>
           </div>
         </article>
 
@@ -126,7 +126,7 @@ export default function GallerySection() {
           <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <ButtonComponent />
+            <ButtonComponent>Order Now</ButtonComponent>
           </div>
         </article>
 
@@ -138,7 +138,7 @@ export default function GallerySection() {
           <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <ButtonComponent />
+            <ButtonComponent>Order Now</ButtonComponent>
           </div>
         </article>
 
@@ -150,7 +150,7 @@ export default function GallerySection() {
           <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <ButtonComponent />
+            <ButtonComponent>Order Now</ButtonComponent>
           </div>
         </article>
 
@@ -162,7 +162,7 @@ export default function GallerySection() {
           <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <ButtonComponent />
+            <ButtonComponent>Order Now</ButtonComponent>
           </div>
         </article>
       </div>

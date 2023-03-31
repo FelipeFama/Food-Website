@@ -5,7 +5,7 @@ interface Props {
   children: String;
 }
 
-export default function ButtonComponent({ children }: Props) {
+export default function ButtonSections({ children }: Props) {
   return (
     <>
       <button type="submit" className={styles.btn}>

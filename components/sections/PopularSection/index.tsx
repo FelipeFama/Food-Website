@@ -8,7 +8,7 @@ import popularSweetsImg from "../../../assets/popular/p-3.jpg";
 import popularCupcakesImg from "../../../assets/popular/p-4.jpg";
 import popularDrinksImg from "../../../assets/popular/p-5.jpg";
 import popularIceCreamImg from "../../../assets/popular/p-6.jpg";
-import ButtonComponent from "@/components/ButtonComponent";
+import ButtonComponent from "@/components/ButtonSections";
 
 const popularFoodImages = {
   popularBurgerImage: {

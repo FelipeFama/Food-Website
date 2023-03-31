@@ -53,113 +53,113 @@ const galleryFoodImages = {
 
 export default function GallerySection() {
   return (
-    <section>
+    <section className={styles.gallery} id="gallery">
       <h1 className={styles.heading}>
         Our food <span>gallery</span>
       </h1>
-      <div className="box-container">
-        <div className="box">
+      <div className={styles.boxContainer}>
+        <div className={styles.box}>
           <Image
             src={galleryFoodImages.galleryBurgerImage.source}
             alt={galleryFoodImages.galleryBurgerImage.alt}
           />
-          <div className="content">
+          <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
         </div>
 
-        <div className="box">
+        <div className={styles.box}>
           <Image
             src={galleryFoodImages.gallerySandwichImage.source}
             alt={galleryFoodImages.gallerySandwichImage.alt}
           />
-          <div className="content">
+          <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
         </div>
 
-        <div className="box">
+        <div className={styles.box}>
           <Image
             src={galleryFoodImages.galleryBurritoImage.source}
             alt={galleryFoodImages.galleryBurritoImage.alt}
           />
-          <div className="content">
+          <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
         </div>
 
-        <div className="box">
+        <div className={styles.box}>
           <Image
             src={galleryFoodImages.galleryCupCakeImage.source}
             alt={galleryFoodImages.galleryCupCakeImage.alt}
           />
-          <div className="content">
+          <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
         </div>
 
-        <div className="box">
+        <div className={styles.box}>
           <Image
             src={galleryFoodImages.galleryFudgeImage.source}
             alt={galleryFoodImages.galleryFudgeImage.alt}
           />
-          <div className="content">
+          <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
         </div>
 
-        <div className="box">
+        <div className={styles.box}>
           <Image
             src={galleryFoodImages.galleryFriedChickenImage.source}
             alt={galleryFoodImages.galleryFriedChickenImage.alt}
           />
-          <div className="content">
+          <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
         </div>
 
-        <div className="box">
+        <div className={styles.box}>
           <Image
             src={galleryFoodImages.galleryBreadWithEggImage.source}
             alt={galleryFoodImages.galleryBreadWithEggImage.alt}
           />
-          <div className="content">
+          <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
         </div>
 
-        <div className="box">
+        <div className={styles.box}>
           <Image
             src={galleryFoodImages.galleryChocolateCandiesImage.source}
             alt={galleryFoodImages.galleryChocolateCandiesImage.alt}
           />
-          <div className="content">
+          <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
         </div>
 
-        <div className="box">
+        <div className={styles.box}>
           <Image
             src={galleryFoodImages.galleryBananaBreadImage.source}
             alt={galleryFoodImages.galleryBananaBreadImage.alt}
           />
-          <div className="content">
+          <div className={styles.content}>
             <h3>tasty food</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />

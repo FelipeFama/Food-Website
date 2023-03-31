@@ -28,7 +28,7 @@ export default function ReviewSection() {
         our customers <span>reviews</span>
       </h1>
       <div className={styles.boxContainer}>
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={reviewImages.firstPicImage.source}
             alt={reviewImages.firstPicImage.alt}
@@ -43,9 +43,9 @@ export default function ReviewSection() {
             <FaRegStar></FaRegStar>
           </div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={reviewImages.secondPicImage.source}
             alt={reviewImages.secondPicImage.alt}
@@ -60,9 +60,9 @@ export default function ReviewSection() {
             <FaRegStar></FaRegStar>
           </div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={reviewImages.thirdPicImage.source}
             alt={reviewImages.thirdPicImage.alt}
@@ -77,7 +77,7 @@ export default function ReviewSection() {
             <FaRegStar></FaRegStar>
           </div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
+        </article>
       </div>
     </section>
   );

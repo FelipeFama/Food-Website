@@ -1,11 +1,15 @@
 import React from "react";
 import styles from "./style.module.scss";
 
-export default function ButtonComponent() {
+interface Props {
+  children: String;
+}
+
+export default function ButtonComponent({ children, ...props }: Props) {
   return (
     <>
-      <button type="submit" className={styles.btn}>
-        order now
+      <button type="submit" className={styles.btn} {...props}>
+        {children}
       </button>
     </>
   );

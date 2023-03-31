@@ -4,8 +4,8 @@ import ButtonComponent from "../../ButtonComponent";
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="share">
+    <footer className={styles.footer}>
+      <div className={styles.share}>
         <ButtonComponent>facebook</ButtonComponent>
         <ButtonComponent>twitter</ButtonComponent>
         <ButtonComponent>instagram</ButtonComponent>
@@ -13,7 +13,7 @@ export default function Footer() {
         <ButtonComponent>linkedin</ButtonComponent>
       </div>
 
-      <h1 className="credit">
+      <h1 className={styles.credit}>
         created by <span> lipeh fama </span> | all rights reserved!
       </h1>
     </footer>

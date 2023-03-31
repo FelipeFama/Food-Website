@@ -1,0 +1,24 @@
+@use "../../../styles/variables.scss";
+
+.footer {
+  background: variables.$black;
+  text-align: center;
+  & button {
+    background: variables.$black;
+  }
+  & .share {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  & .credit {
+    padding: 2.5rem 1rem;
+    color: variables.$white;
+    font-weight: normal;
+    font-size: 2rem;
+    & span {
+      color: variables.$medium-light-red;
+    }
+  }
+}

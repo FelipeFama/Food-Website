@@ -6,17 +6,20 @@ import StepsSection from "./StepsSection";
 import GallerySection from "./GallerySection";
 import ReviewSection from "./ReviewSection";
 import OrderSection from "./OrderSection";
+import Layout from "../Layout";
 
-export default function Layout() {
+export default function Sections() {
   return (
     <>
-      <HomeSection />
-      <SpecialitySection />
-      <PopularSection />
-      <StepsSection />
-      <GallerySection />
-      <ReviewSection />
-      <OrderSection />
+      <Layout>
+        <HomeSection />
+        <SpecialitySection />
+        <PopularSection />
+        <StepsSection />
+        <GallerySection />
+        <ReviewSection />
+        <OrderSection />
+      </Layout>
     </>
   );
 }

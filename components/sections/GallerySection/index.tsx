@@ -58,7 +58,7 @@ export default function GallerySection() {
         Our food <span>gallery</span>
       </h1>
       <div className={styles.boxContainer}>
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={galleryFoodImages.galleryBurgerImage.source}
             alt={galleryFoodImages.galleryBurgerImage.alt}
@@ -68,9 +68,9 @@ export default function GallerySection() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={galleryFoodImages.gallerySandwichImage.source}
             alt={galleryFoodImages.gallerySandwichImage.alt}
@@ -80,9 +80,9 @@ export default function GallerySection() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={galleryFoodImages.galleryBurritoImage.source}
             alt={galleryFoodImages.galleryBurritoImage.alt}
@@ -92,9 +92,9 @@ export default function GallerySection() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={galleryFoodImages.galleryCupCakeImage.source}
             alt={galleryFoodImages.galleryCupCakeImage.alt}
@@ -104,9 +104,9 @@ export default function GallerySection() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={galleryFoodImages.galleryFudgeImage.source}
             alt={galleryFoodImages.galleryFudgeImage.alt}
@@ -116,9 +116,9 @@ export default function GallerySection() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={galleryFoodImages.galleryFriedChickenImage.source}
             alt={galleryFoodImages.galleryFriedChickenImage.alt}
@@ -128,9 +128,9 @@ export default function GallerySection() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={galleryFoodImages.galleryBreadWithEggImage.source}
             alt={galleryFoodImages.galleryBreadWithEggImage.alt}
@@ -140,9 +140,9 @@ export default function GallerySection() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={galleryFoodImages.galleryChocolateCandiesImage.source}
             alt={galleryFoodImages.galleryChocolateCandiesImage.alt}
@@ -152,9 +152,9 @@ export default function GallerySection() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
-        </div>
+        </article>
 
-        <div className={styles.box}>
+        <article className={styles.box}>
           <Image
             src={galleryFoodImages.galleryBananaBreadImage.source}
             alt={galleryFoodImages.galleryBananaBreadImage.alt}
@@ -164,7 +164,7 @@ export default function GallerySection() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <ButtonComponent />
           </div>
-        </div>
+        </article>
       </div>
     </section>
   );

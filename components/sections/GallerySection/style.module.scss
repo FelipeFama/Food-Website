@@ -1,1 +1,57 @@
 @use "../../../styles/variables.scss";
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  & .heading {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+    color: variables.$medium-dark-gray;
+    & span {
+      color: variables.$medium-light-red;
+      margin-left: 1rem;
+    }
+  }
+  & .boxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    & .box {
+      height: 25rem;
+      flex: 1 1 30rem;
+      border: 1rem solid variables.$white;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      border-radius: 0.5rem;
+      position: relative;
+      overflow: hidden;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &:hover .content {
+        top: 0;
+      }
+      & .content {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        padding-top: 5rem;
+        text-align: center;
+        & h3 {
+          font-size: 2.5rem;
+          color: variables.$dark-chacoal;
+        }
+        & p {
+          font-size: 1.5rem;
+          color: variables.$medium-dark-gray;
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+}

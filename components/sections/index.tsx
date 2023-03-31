@@ -5,6 +5,7 @@ import PopularSection from "./PopularSection";
 import StepsSection from "./StepsSection";
 import GallerySection from "./GallerySection";
 import ReviewSection from "./ReviewSection";
+import OrderSection from "./OrderSection";
 
 export default function Layout() {
   return (
@@ -15,6 +16,7 @@ export default function Layout() {
       <StepsSection />
       <GallerySection />
       <ReviewSection />
+      <OrderSection />
     </>
   );
 }

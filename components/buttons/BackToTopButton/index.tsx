@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
+import { FaAngleUp } from "react-icons/fa";
 import styles from "./style.module.scss";
-import { FaChevronUp } from "react-icons/fa";
 
 export default function BackToTopButton() {
   const scrollTopButtonRef = useRef<HTMLAnchorElement>(null);
 
   const handleScrollTop = () => {
-    window.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -15,9 +15,9 @@ export default function BackToTopButton() {
     window.onscroll = () => {
       if (scrollTopButton) {
         if (window.scrollY > 60) {
-          scrollTopButton.classList.add("active");
+          scrollTopButton.classList.add(styles.active);
         } else {
-          scrollTopButton.classList.remove("active");
+          scrollTopButton.classList.remove(styles.active);
         }
       }
     };
@@ -29,8 +29,13 @@ export default function BackToTopButton() {
 
   return (
     <>
-      <a href="#" className={styles.scrollTop} onClick={handleScrollTop}>
-        <FaChevronUp />
+      <a
+        href="#home"
+        className={`${styles["scroll-top"]}`}
+        ref={scrollTopButtonRef}
+        onClick={handleScrollTop}
+      >
+        <FaAngleUp />
       </a>
     </>
   );

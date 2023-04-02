@@ -33,23 +33,26 @@
     & form {
       flex: 1 1 50rem;
       padding: 1rem;
-      & .inputBox {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+    }
+    & .inputBox {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    & .inputBox input,
+    textarea {
+      padding: 1rem;
+      margin: 1rem 0;
+      font-size: 1.7rem;
+      color: variables.$dark-chacoal;
+      text-transform: none;
+      border: 0.1rem solid rgba(0, 0, 0, 0.3);
+      border-radius: 0.5rem;
+      width: 45%;
+      @media (max-width: 480px) {
+        width: 100%;
       }
-      & .inputBox input,
-      textarea {
-        padding: 1rem;
-        margin: 1rem 0;
-        font-size: 1.7rem;
-        color: variables.$dark-chacoal;
-        text-transform: none;
-        border: 0.1rem solid rgba(0, 0, 0, 0.3);
-        border-radius: 0.5rem;
-        width: 45%;
-      }
-      & .textarea {
+      &.textarea {
         width: 100%;
         resize: none;
         height: 15rem;

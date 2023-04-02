@@ -21,6 +21,12 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
+  @media screen and (max-width: 991px) {
+    font-size: 55%;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -29,4 +35,7 @@ body {
 
 section {
   padding: 2rem 9%;
+  @media screen and (max-width: 991px) {
+    padding: 2rem;
+  }
 }

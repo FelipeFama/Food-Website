@@ -1,0 +1,17 @@
+@use "../../../styles/variables.scss";
+
+.loaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background: variables.$white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  &.fadeOut {
+    top: -120%;
+  }
+}

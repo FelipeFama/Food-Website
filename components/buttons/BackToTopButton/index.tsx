@@ -31,7 +31,7 @@ export default function BackToTopButton() {
     <>
       <a
         href="#home"
-        className={`${styles["scroll-top"]}`}
+        className={`${styles["scrollTop"]}`}
         ref={scrollTopButtonRef}
         onClick={handleScrollTop}
       >

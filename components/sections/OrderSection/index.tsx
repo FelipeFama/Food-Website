@@ -1,13 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./style.module.scss";
-import orderImg from "../../../assets/order-img.jpg";
+import { orderImage } from "@/data/illustrations";
 import ButtonComponent from "@/components/buttons/ButtonSections";
-
-const orderImage = {
-  source: orderImg,
-  alt: "waitress",
-};
+import styles from "./style.module.scss";
 
 export default function OrderSection() {
   return (

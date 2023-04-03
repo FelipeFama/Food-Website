@@ -1,25 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import { reviewImages } from "@/data/review";
 import styles from "./style.module.scss";
 import { FaStar, FaRegStar } from "react-icons/fa";
-import firstPicImg from "../../../assets/review/pic1.png";
-import secondPicImg from "../../../assets/review/pic2.png";
-import thirdPicImg from "../../../assets/review/pic3.png";
-
-const reviewImages = {
-  firstPicImage: {
-    source: firstPicImg,
-    alt: "joana",
-  },
-  secondPicImage: {
-    source: secondPicImg,
-    alt: "jonh",
-  },
-  thirdPicImage: {
-    source: thirdPicImg,
-    alt: "julia",
-  },
-};
 
 export default function ReviewSection() {
   return (

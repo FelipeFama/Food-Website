@@ -1,14 +1,7 @@
 import Image from "next/image";
-import homeImg from "../../../assets/home-img.png";
-import styles from "./style.module.scss";
+import { home } from "@/data/illustrations";
 import ButtonComponent from "@/components/buttons/ButtonSections";
-
-const home = {
-  homeImage: {
-    source: homeImg,
-    alt: "burger",
-  },
-};
+import styles from "./style.module.scss";
 
 export default function HomeSection() {
   return (
@@ -25,12 +18,7 @@ export default function HomeSection() {
       </article>
 
       <figure className={styles.image}>
-        <Image
-          src={home.homeImage.source}
-          alt={home.homeImage.alt}
-          width={500}
-          height={500}
-        />
+        <Image src={home.source} alt={home.alt} width={500} height={500} />
       </figure>
     </section>
   );

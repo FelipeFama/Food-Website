@@ -1,7 +1,29 @@
 import React from "react";
 import Image from "next/image";
-import { stepImages } from "@/data/steps";
+import foodSteepImg from "../../../assets/steps/step-1.jpg";
+import deliverySteepImg from "../../../assets/steps/step-2.jpg";
+import paymentsSteepImg from "../../../assets/steps/step-3.jpg";
+import finallySteepImg from "../../../assets/steps/step-4.jpg";
 import styles from "./style.module.scss";
+
+const stepImages = {
+  foodSteepImage: {
+    source: foodSteepImg,
+    alt: "food",
+  },
+  deliverySteepImage: {
+    source: deliverySteepImg,
+    alt: "food",
+  },
+  paymentsSteepImage: {
+    source: paymentsSteepImg,
+    alt: "food",
+  },
+  finallySteepImage: {
+    source: finallySteepImg,
+    alt: "food",
+  },
+};
 
 export default function StepsSection() {
   return (

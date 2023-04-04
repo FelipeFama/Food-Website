@@ -1,0 +1,23 @@
+@use "variables";
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin title {
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 1rem;
+  color: variables.$medium-dark-gray;
+  & span {
+    color: variables.$medium-light-red;
+    margin-left: 1rem;
+  }
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}

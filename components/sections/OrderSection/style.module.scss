@@ -1,25 +1,16 @@
 @use "../../../styles/variables.scss";
+@use "../../../styles/mixins.scss";
 
 .order {
-  display: flex;
-  flex-direction: column;
+  @include mixins.flex-col;
   & .heading {
-    text-align: center;
-    font-size: 3.5rem;
-    padding: 1rem;
-    color: variables.$medium-dark-gray;
-    & span {
-      color: variables.$medium-light-red;
-      margin-left: 1rem;
-    }
+    @include mixins.title;
   }
   & .row {
     padding: 2rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     background: variables.$white;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    @include mixins.flex-wrap;
     border-radius: 0.5rem;
     & .image {
       flex: 1 1 30rem;

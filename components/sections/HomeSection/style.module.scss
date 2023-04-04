@@ -1,9 +1,8 @@
 @use "../../../styles/variables.scss";
+@use "../../../styles/mixins.scss";
 
 .home {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  @include mixins.flex-wrap;
   min-height: 100vh;
   align-items: center;
   background: url(../../../assets/home-bg.jpg) no-repeat;

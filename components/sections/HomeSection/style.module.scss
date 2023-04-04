@@ -26,6 +26,19 @@
     & img {
       width: 100%;
       padding: 1rem;
+      animation: float 3s linear infinite;
     }
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(3rem);
+  }
+  100% {
+    transform: translateY(0rem);
   }
 }

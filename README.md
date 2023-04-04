@@ -1,38 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#  Food Website Tutorial
 
-## Getting Started
 
-First, run the development server:
+### Screenshots
+
+<table>
+  <tr>
+    <td>Mobile Version</td>
+    <td>Desktop Version</td>
+  </tr>
+  <tr valign="top">
+    <td> <img src="https://user-images.githubusercontent.com/91050670/229861805-83da1c6e-045f-42b0-a3e3-eebab6881eb2.png" alt="mobile version" widht=450 height=400  /></td>
+    <td><img src="https://user-images.githubusercontent.com/91050670/229860513-578d6718-1381-4e9f-a2a0-24d78acf14ae.png" alt="desktop version" width=800 height=400 /></td>
+  </tr>
+</table>
+
+
+## :rocket: Run Project
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
+or
+
+yarn install
+yarn run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## :wrench: Technologies Used
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![NextJs](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## :book: Project Information
+- Food website tutorial
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Semantic HTML5 markup
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Sass
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Grid and Flex
 
-## Learn More
+- Media queries and responsivity
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## :bulb: Author: Lipeh Fama
+   My links:
+   <p><a href="https://github.com/FelipeFama">My Github</a></p>
+   
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

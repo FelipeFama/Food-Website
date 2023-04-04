@@ -39,3 +39,16 @@ section {
     padding: 2rem;
   }
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: variables.$very-light-gray;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: variables.$medium-light-red;
+  border-radius: 10px;
+}

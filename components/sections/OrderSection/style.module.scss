@@ -8,7 +8,7 @@
   }
   & .row {
     padding: 2rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem variables.$black-opacity;
     background: variables.$white;
     @include mixins.flex-wrap;
     border-radius: 0.5rem;
@@ -37,7 +37,7 @@
       font-size: 1.7rem;
       color: variables.$dark-chacoal;
       text-transform: none;
-      border: 0.1rem solid rgba(0, 0, 0, 0.3);
+      border: 0.1rem solid variables.$second-black-opacity;
       border-radius: 0.5rem;
       width: 45%;
       @media (max-width: 480px) {

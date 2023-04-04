@@ -11,7 +11,7 @@
   justify-content: space-between;
   background: variables.$white;
   padding: 2rem 9%;
-  box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0.5rem 1rem variables.$black-opacity;
   @media screen and (max-width: 991px) {
     padding: 2rem;
   }
@@ -46,7 +46,7 @@
       left: 0;
       right: 0;
       background: variables.$earthborn-bugle;
-      border-top: 0.3rem solid rgba(0, 0, 0, 0.1);
+      border-top: 0.3rem solid variables.$black-opacity;
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
     & a {
@@ -56,7 +56,7 @@
         margin: 1.5rem;
         padding: 1.5rem;
         display: block;
-        border: 0.2rem solid rgba(0, 0, 0, 0.1);
+        border: 0.2rem solid variables.$black-opacity;
         border-left: 0.5rem solid variables.$medium-light-red;
         background: variables.$white;
       }

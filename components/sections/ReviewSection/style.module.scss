@@ -12,7 +12,7 @@
       text-align: center;
       padding: 0.5rem;
       border: 1rem solid variables.$white;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0.5rem 1rem variables.$second-black-opacity;
       border-radius: 0.5rem;
       flex: 1 1 30rem;
       background: variables.$dark-chacoal;

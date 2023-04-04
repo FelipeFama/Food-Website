@@ -11,8 +11,8 @@
     & .box {
       padding: 2rem;
       background: variables.$white;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-      border: 0.1rem solid rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0.5rem 1rem variables.$black-opacity;
+      border: 0.1rem solid variables.$second-black-opacity;
       border-radius: 0.5rem;
       text-align: center;
       flex: 1 1 30rem;

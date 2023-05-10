@@ -1,2 +1,8 @@
+[build]
+  base: "/"
+  command: "yarn run build"
+  functions: "netlify functions"
+  Publish directory: "/dist/food-web/.next"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"

@@ -9,6 +9,7 @@
   & .boxContainer {
     @include mixins.flex-wrap;
     & .box {
+      display: flex;
       flex: 1 1 30rem;
       position: relative;
       overflow: hidden;

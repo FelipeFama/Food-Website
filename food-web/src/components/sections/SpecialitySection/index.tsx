@@ -25,7 +25,6 @@ interface Speciality {
 }
 
 export default function SpecialitySection({ speciality }: SpecialityProps) {
-  console.log(speciality);
   return (
     <section className={styles.speciality} id="speciality">
       <h1 className={styles.heading}>

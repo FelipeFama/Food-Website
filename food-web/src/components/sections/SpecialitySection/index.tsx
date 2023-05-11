@@ -1,133 +1,60 @@
 import Image from "next/image";
 import { iconsFood, specialityFoodImages } from "@/data/speciality";
 import styles from "./style.module.scss";
+import { useNextSanityImage } from "next-sanity-image";
+import { client } from "@/sanity";
 
-export default function SpecialitySection() {
+export interface SpecialityProps {
+  speciality:
+    | {
+        _id: string;
+        title: string;
+        description: string;
+        image: {
+          alt: string;
+          source: string;
+        };
+        icon: {
+          alt: string;
+          source: string;
+        };
+      }[]
+    | any;
+}
+
+export default function SpecialitySection({ speciality }: SpecialityProps) {
+  console.log(speciality);
+  const imageProps: any = useNextSanityImage(client, speciality.image);
+  const iconProps: any = useNextSanityImage(client, speciality.icon);
+
   return (
     <section className={styles.speciality} id="speciality">
       <h1 className={styles.heading}>
-        our<span>speciality</span>
+        our <span>speciality</span>
       </h1>
       <div className={styles.boxContainer}>
-        <article className={styles.box}>
-          <Image
-            className={styles.image}
-            src={specialityFoodImages.burgerImage.source}
-            alt={specialityFoodImages.burgerImage.alt}
-          />
-          <div className={styles.content}>
-            <Image
-              src={iconsFood.burgerIconImage.source}
-              alt={iconsFood.burgerIconImage.alt}
-            />
-            <h3>tasty burger</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Excepturi, atque consequatur veritatis debitis cumque voluptatum
-              doloribus deleniti.
-            </p>
-          </div>
-        </article>
-
-        <article className={styles.box}>
-          <Image
-            className={styles.image}
-            src={specialityFoodImages.pizzaImage.source}
-            alt={specialityFoodImages.pizzaImage.alt}
-          />
-          <div className={styles.content}>
-            <Image
-              src={iconsFood.pizzaIconImage.source}
-              alt={iconsFood.pizzaIconImage.alt}
-            />
-            <h3>tasty pizza</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Excepturi, atque consequatur veritatis debitis cumque voluptatum
-              doloribus deleniti.
-            </p>
-          </div>
-        </article>
-
-        <article className={styles.box}>
-          <Image
-            className={styles.image}
-            src={specialityFoodImages.iceCreamImage.source}
-            alt={specialityFoodImages.iceCreamImage.alt}
-          />
-          <div className={styles.content}>
-            <Image
-              src={iconsFood.iceCreamIconImage.source}
-              alt={iconsFood.iceCreamIconImage.alt}
-            />
-            <h3>cold ice-cream</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Excepturi, atque consequatur veritatis debitis cumque voluptatum
-              doloribus deleniti.
-            </p>
-          </div>
-        </article>
-
-        <article className={styles.box}>
-          <Image
-            className={styles.image}
-            src={specialityFoodImages.drinksImage.source}
-            alt={specialityFoodImages.drinksImage.alt}
-          />
-          <div className={styles.content}>
-            <Image
-              src={iconsFood.drinksIconImage.source}
-              alt={iconsFood.drinksIconImage.alt}
-            />
-            <h3>cold drinks</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Excepturi, atque consequatur veritatis debitis cumque voluptatum
-              doloribus deleniti.
-            </p>
-          </div>
-        </article>
-
-        <article className={styles.box}>
-          <Image
-            className={styles.image}
-            src={specialityFoodImages.sweetImage.source}
-            alt={specialityFoodImages.sweetImage.alt}
-          />
-          <div className={styles.content}>
-            <Image
-              src={iconsFood.sweetIconImage.source}
-              alt={iconsFood.sweetIconImage.alt}
-            />
-            <h3>tasty sweet</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Excepturi, atque consequatur veritatis debitis cumque voluptatum
-              doloribus deleniti.
-            </p>
-          </div>
-        </article>
-
-        <article className={styles.box}>
-          <Image
-            className={styles.image}
-            src={specialityFoodImages.breakfastImage.source}
-            alt={specialityFoodImages.breakfastImage.alt}
-          />
-          <div className={styles.content}>
-            <Image
-              src={iconsFood.breakfastIconImage.source}
-              alt={iconsFood.breakfastIconImage.alt}
-            />
-            <h3>healty breakfast</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Excepturi, atque consequatur veritatis debitis cumque voluptatum
-              doloribus deleniti.
-            </p>
-          </div>
-        </article>
+        {speciality.map((item: any) => (
+          <article key={item._id} className={styles.box}>
+            {speciality.image && imageProps[speciality.image.asset._ref] && (
+              <Image
+                className={styles.Image}
+                src={imageProps[speciality.image.asset._ref]?.source ?? ""}
+                alt={speciality.image.alt}
+              />
+            )}
+            <div className={styles.content}>
+              {speciality.image && imageProps[speciality.image.asset._ref] && (
+                <Image
+                  className={styles.Image}
+                  src={iconProps[speciality.icon.asset._ref]?.source ?? ""}
+                  alt={speciality.icon.alt}
+                />
+              )}
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );

@@ -9,7 +9,7 @@ export default function PopularSection() {
   return (
     <section className={styles.popular} id="popular">
       <h1 className={styles.heading}>
-        most<span>popular</span>foods
+        most <span>popular</span> foods
       </h1>
       <div className={styles.boxContainer}>
         <article className={styles.box}>

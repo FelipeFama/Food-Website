@@ -3,9 +3,7 @@ import { GetStaticProps } from "next";
 import Header from "@/components/Layout/Header";
 import Head from "next/head";
 import HomeSection from "@/components/sections/HomeSection";
-import SpecialitySection, {
-  SpecialityProps,
-} from "@/components/sections/SpecialitySection";
+import SpecialitySection from "@/components/sections/SpecialitySection";
 import PopularSection from "@/components/sections/PopularSection";
 import StepsSection from "@/components/sections/StepsSection";
 import GallerySection from "@/components/sections/GallerySection";
@@ -16,7 +14,7 @@ import BackToTopButton from "@/components/buttons/BackToTopButton";
 import Loader from "@/components/Layout/Loader";
 
 interface Props {
-  speciality: SpecialityProps;
+  speciality: any;
 }
 
 export default function Home({ speciality }: Props) {

@@ -3,6 +3,8 @@ export default {
   title: 'Speciality',
   type: 'document',
   fields: [
+    {name: 'title', title: 'Title', type: 'string'},
+    {name: 'description', title: 'Description', type: 'text'},
     {
       name: 'image',
       title: 'Image',
@@ -27,7 +29,6 @@ export default {
         },
       ],
     },
-    {name: 'title', title: 'Title', type: 'string'},
-    {name: 'description', title: 'Description', type: 'text'},
   ],
+  
 }

@@ -44,7 +44,9 @@ export default function Home({ speciality }: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const speciality = await client.fetch(`*[_type == "speciality"]`);
+  const speciality = await client.fetch(
+    `*[_type == "speciality"] | order(_createdAt desc)`
+  );
   return {
     props: {
       speciality,

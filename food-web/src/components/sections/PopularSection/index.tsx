@@ -2,123 +2,55 @@ import React from "react";
 import Image from "next/image";
 import styles from "./style.module.scss";
 import { FaStar, FaRegStar } from "react-icons/fa";
-import { popularFoodImages } from "@/data/popular";
 import ButtonComponent from "@/components/buttons/ButtonSections";
+import { useNextSanityImage } from "next-sanity-image";
+import { client } from "@/sanity";
+interface PopularProps {
+  popular: Popular[];
+}
 
-export default function PopularSection() {
+interface Popular {
+  _id: string;
+  title: string;
+  span: string;
+  image: {
+    alt: string;
+    asset: {
+      _ref: string;
+    };
+  };
+}
+
+export default function PopularSection({ popular }: PopularProps) {
   return (
     <section className={styles.popular} id="popular">
       <h1 className={styles.heading}>
         most <span>popular</span> foods
       </h1>
       <div className={styles.boxContainer}>
-        <article className={styles.box}>
-          <span className={styles.price}>$5 - $20</span>
-          <Image
-            src={popularFoodImages.popularBurgerImage.source}
-            alt={popularFoodImages.popularBurgerImage.alt}
-          />
-          <h3>tasty burger</h3>
-          <div className={styles.stars}>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaRegStar></FaRegStar>
-          </div>
-          <ButtonComponent>Order Now</ButtonComponent>
-        </article>
-
-        <article className={styles.box}>
-          <span className={styles.price}>$5 - $20</span>
-          <Image
-            src={popularFoodImages.popularCakeImage.source}
-            alt={popularFoodImages.popularCakeImage.alt}
-          />
-          <h3>tasty cakes</h3>
-          <div className={styles.stars}>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaRegStar></FaRegStar>
-          </div>
-          <ButtonComponent>Order Now</ButtonComponent>
-        </article>
-
-        <article className={styles.box}>
-          <span className={styles.price}>$5 - $20</span>
-          <Image
-            src={popularFoodImages.popularSweetImage.source}
-            alt={popularFoodImages.popularSweetImage.alt}
-          />
-          <h3>tasty sweets</h3>
-          <div className={styles.stars}>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaRegStar></FaRegStar>
-          </div>
-          <ButtonComponent>Order Now</ButtonComponent>
-        </article>
-
-        <article className={styles.box}>
-          <span className={styles.price}>$5 - $20</span>
-          <Image
-            src={popularFoodImages.popularCupcakesImage.source}
-            alt={popularFoodImages.popularCupcakesImage.alt}
-          />
-          <h3>tasty cupcakes</h3>
-          <div className={styles.stars}>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaRegStar></FaRegStar>
-          </div>
-          <ButtonComponent>Order Now</ButtonComponent>
-        </article>
-
-        <article className={styles.box}>
-          <span className={styles.price}>$5 - $20</span>
-          <Image
-            src={popularFoodImages.popularDrinksImage.source}
-            alt={popularFoodImages.popularDrinksImage.alt}
-          />
-          <h3>cold drinks</h3>
-          <div className={styles.stars}>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaRegStar></FaRegStar>
-          </div>
-          <ButtonComponent>Order Now</ButtonComponent>
-        </article>
-
-        <article className={styles.box}>
-          <span className={styles.price}>$5 - $20</span>
-          <Image
-            src={popularFoodImages.popularIceCreamImage.source}
-            alt={popularFoodImages.popularIceCreamImage.alt}
-          />
-          <h3>cold ice-cream</h3>
-          <div className={styles.stars}>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaRegStar></FaRegStar>
-          </div>
-          <ButtonComponent>Order Now</ButtonComponent>
-        </article>
+        {popular.map((item: Popular) => (
+          <article key={item._id} className={styles.box}>
+            <span className={styles.price}>{item.span}</span>
+            {item.image && (
+              <Image
+                className={styles.image}
+                // eslint-disable-next-line react-hooks/rules-of-hooks
+                {...useNextSanityImage(client, item.image.asset._ref)}
+                alt={item.image.alt}
+              />
+            )}
+            <h3>{item.title}</h3>
+            <div className={styles.stars}>
+              <FaStar></FaStar>
+              <FaStar></FaStar>
+              <FaStar></FaStar>
+              <FaStar></FaStar>
+              <FaStar></FaStar>
+              <FaRegStar></FaRegStar>
+            </div>
+            <ButtonComponent>Order Now</ButtonComponent>
+          </article>
+        ))}
       </div>
     </section>
   );

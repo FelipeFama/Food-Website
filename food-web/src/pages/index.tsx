@@ -15,9 +15,10 @@ import Loader from "@/components/Layout/Loader";
 
 interface Props {
   speciality: any;
+  popular: any;
 }
 
-export default function Home({ speciality }: Props) {
+export default function Home({ speciality, popular }: Props) {
   return (
     <>
       <Head>
@@ -30,7 +31,7 @@ export default function Home({ speciality }: Props) {
       <main>
         <HomeSection />
         <SpecialitySection speciality={speciality} />
-        <PopularSection />
+        <PopularSection popular={popular} />
         <StepsSection />
         <GallerySection />
         <ReviewSection />
@@ -47,9 +48,13 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const speciality = await client.fetch(
     `*[_type == "speciality"] | order(_createdAt desc)`
   );
+  const popular = await client.fetch(
+    `*[_type == "popular"] | order(_createdAt desc)`
+  );
   return {
     props: {
       speciality,
+      popular,
     },
   };
 };

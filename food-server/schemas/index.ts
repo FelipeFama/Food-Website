@@ -1,4 +1,6 @@
-import popular from "./popular";
-import speciality from "./speciality";
+import speciality from './speciality'
+import popular from './popular'
+import steps from './steps'
+import gallery from './gallery'
 
-export const schemaTypes = [speciality,popular]
+export const schemaTypes = [speciality, popular, steps, gallery]

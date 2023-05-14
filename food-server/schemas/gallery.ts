@@ -1,6 +1,6 @@
 export default {
-  name: 'speciality',
-  title: 'Speciality',
+  name: 'gallery',
+  title: 'Gallery',
   type: 'document',
   fields: [
     {name: 'title', title: 'Title', type: 'string'},
@@ -8,18 +8,6 @@ export default {
     {
       name: 'image',
       title: 'Image',
-      type: 'image',
-      fields: [
-        {
-          name: 'alt',
-          title: 'Alt',
-          type: 'string',
-        },
-      ],
-    },
-    {
-      name: 'icon',
-      title: 'Icon',
       type: 'image',
       fields: [
         {

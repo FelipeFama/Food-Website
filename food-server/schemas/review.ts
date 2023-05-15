@@ -1,6 +1,6 @@
 export default {
-  name: 'speciality',
-  title: 'Speciality',
+  name: 'review',
+  title: 'Review',
   type: 'document',
   fields: [
     {name: 'title', title: 'Title', type: 'string'},

@@ -18,9 +18,16 @@ interface Props {
   popular: any;
   steps: any;
   gallery: any;
+  review: any;
 }
 
-export default function Home({ speciality, popular, steps, gallery }: Props) {
+export default function Home({
+  speciality,
+  popular,
+  steps,
+  gallery,
+  review,
+}: Props) {
   return (
     <>
       <Head>
@@ -36,7 +43,7 @@ export default function Home({ speciality, popular, steps, gallery }: Props) {
         <PopularSection popular={popular} />
         <StepsSection steps={steps} />
         <GallerySection gallery={gallery} />
-        <ReviewSection />
+        <ReviewSection review={review} />
         <OrderSection />
       </main>
       <Footer />
@@ -59,12 +66,17 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const gallery = await client.fetch(
     `*[_type == "gallery"] | order(_createdAt desc)`
   );
+  const review = await client.fetch(
+    `*[_type == "review"] | order(_createdAt desc)`
+  );
+
   return {
     props: {
       speciality,
       popular,
       steps,
       gallery,
+      review,
     },
   };
 };

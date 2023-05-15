@@ -1,66 +1,55 @@
 import React from "react";
 import Image from "next/image";
-import { reviewImages } from "@/data/review";
 import styles from "./style.module.scss";
 import { FaStar, FaRegStar } from "react-icons/fa";
+import { useNextSanityImage } from "next-sanity-image";
+import { client } from "@/sanity";
 
-export default function ReviewSection() {
+interface ReviewProps {
+  review: Review[];
+}
+
+interface Review {
+  _id: string;
+  title: string;
+  description: string;
+  image: {
+    alt: string;
+    asset: {
+      _ref: string;
+    };
+  };
+}
+
+export default function ReviewSection({ review }: ReviewProps) {
   return (
     <section className={styles.review} id="review">
       <h1 className={styles.heading}>
         our customers <span>reviews</span>
       </h1>
       <div className={styles.boxContainer}>
-        <article className={styles.box}>
-          <Image
-            src={reviewImages.firstPicImage.source}
-            alt={reviewImages.firstPicImage.alt}
-          />
-          <h3>joana deo</h3>
-          <div className={styles.stars}>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaRegStar></FaRegStar>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </article>
-
-        <article className={styles.box}>
-          <Image
-            src={reviewImages.secondPicImage.source}
-            alt={reviewImages.secondPicImage.alt}
-          />
-          <h3>jonh deo</h3>
-          <div className={styles.stars}>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaRegStar></FaRegStar>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </article>
-
-        <article className={styles.box}>
-          <Image
-            src={reviewImages.thirdPicImage.source}
-            alt={reviewImages.thirdPicImage.alt}
-          />
-          <h3>julia deo</h3>
-          <div className={styles.stars}>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaStar></FaStar>
-            <FaRegStar></FaRegStar>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </article>
+        {review.map((item: Review) => (
+          <article key={item._id} className={styles.box}>
+            {item.image && (
+              <Image
+                className={styles.image}
+                // eslint-disable-next-line react-hooks/rules-of-hooks
+                {...useNextSanityImage(client, item.image.asset._ref)}
+                alt={item.image.alt}
+              />
+            )}
+            <h3>{item.title}</h3>
+            <div className={styles.stars}>
+              <FaStar></FaStar>
+              <FaStar></FaStar>
+              <FaStar></FaStar>
+              <FaStar></FaStar>
+              <FaStar></FaStar>
+              <FaRegStar></FaRegStar>
+            </div>
+            <p>{item.description}</p>
+          </article>
+        ))}
       </div>
     </section>
   );

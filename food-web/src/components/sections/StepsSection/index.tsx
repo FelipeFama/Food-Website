@@ -1,9 +1,25 @@
 import React from "react";
 import Image from "next/image";
-import { stepImages } from "@/data/steps";
 import styles from "./style.module.scss";
+import { useNextSanityImage } from "next-sanity-image";
+import { client } from "@/sanity";
 
-export default function StepsSection() {
+interface StepsProps {
+  steps: Steps[];
+}
+
+interface Steps {
+  _id: string;
+  title: string;
+  image: {
+    alt: string;
+    asset: {
+      _ref: string;
+    };
+  };
+}
+
+export default function StepsSection({ steps }: StepsProps) {
   return (
     <section className={styles.steps}>
       <h1 className={styles.heading}>
@@ -11,37 +27,19 @@ export default function StepsSection() {
       </h1>
 
       <div className={styles.stepsContainer}>
-        <article className={styles.box}>
-          <Image
-            src={stepImages.foodSteepImage.source}
-            alt={stepImages.foodSteepImage.alt}
-          />
-          <h3>choose your favorite food</h3>
-        </article>
-
-        <article className={styles.box}>
-          <Image
-            src={stepImages.deliverySteepImage.source}
-            alt={stepImages.deliverySteepImage.alt}
-          />
-          <h3>free and fast delivery</h3>
-        </article>
-
-        <article className={styles.box}>
-          <Image
-            src={stepImages.paymentsSteepImage.source}
-            alt={stepImages.paymentsSteepImage.alt}
-          />
-          <h3>easy payments methods</h3>
-        </article>
-
-        <article className={styles.box}>
-          <Image
-            src={stepImages.finallySteepImage.source}
-            alt={stepImages.finallySteepImage.alt}
-          />
-          <h3>and finally, enjoy your food</h3>
-        </article>
+        {steps.map((item: Steps) => (
+          <article key={item._id} className={styles.box}>
+            {item.image && (
+              <Image
+                className={styles.image}
+                // eslint-disable-next-line react-hooks/rules-of-hooks
+                {...useNextSanityImage(client, item.image.asset._ref)}
+                alt={item.image.alt}
+              />
+            )}
+            <h3>{item.title}</h3>
+          </article>
+        ))}
       </div>
     </section>
   );

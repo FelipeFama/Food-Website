@@ -18,7 +18,7 @@ export default function HomeSection() {
       </article>
 
       <figure className={styles.image}>
-        <Image src={home.source} alt={home.alt} width={500} height={500} />
+        <Image src={home.source} alt={home.alt} width={500} height={500} priority={false} />
       </figure>
     </section>
   );

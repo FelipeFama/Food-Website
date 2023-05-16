@@ -35,6 +35,7 @@ export default function StepsSection({ steps }: StepsProps) {
                 // eslint-disable-next-line react-hooks/rules-of-hooks
                 {...useNextSanityImage(client, item.image.asset._ref)}
                 alt={item.image.alt}
+                priority={false}
               />
             )}
             <h3>{item.title}</h3>

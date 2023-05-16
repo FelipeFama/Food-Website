@@ -13,7 +13,7 @@ export default function OrderSection() {
 
       <div className={styles.row}>
         <div className={styles.image}>
-          <Image src={orderImage.source} alt={orderImage.alt} />
+          <Image src={orderImage.source} alt={orderImage.alt} priority={false} />
         </div>
 
         <form action="">

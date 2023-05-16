@@ -39,6 +39,7 @@ export default function SpecialitySection({ speciality }: SpecialityProps) {
                 // eslint-disable-next-line react-hooks/rules-of-hooks
                 {...useNextSanityImage(client, item.image.asset._ref)}
                 alt={item.image.alt}
+                priority={false}
               />
             )}
             <div className={styles.content}>
@@ -47,6 +48,7 @@ export default function SpecialitySection({ speciality }: SpecialityProps) {
                   // eslint-disable-next-line react-hooks/rules-of-hooks
                   {...useNextSanityImage(client, item.icon.asset._ref)}
                   alt={item.icon.alt}
+                  priority={false}
                 />
               )}
               <h3>{item.title}</h3>

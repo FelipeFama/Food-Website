@@ -1,10 +1,26 @@
 import React from "react";
 import Image from "next/image";
-import { orderImage } from "@/data/illustrations";
 import ButtonComponent from "@/components/buttons/ButtonSections";
 import styles from "./style.module.scss";
+import { useNextSanityImage } from "next-sanity-image";
+import { client } from "@/sanity";
 
-export default function OrderSection() {
+interface OrderProps {
+  order: Order[];
+}
+
+interface Order {
+  image: {
+    alt: string;
+    asset: {
+      _ref: string;
+    };
+  };
+}
+
+export default function OrderSection({ order }: OrderProps) {
+  const item = order[0];
+
   return (
     <section className={styles.order} id="order">
       <h1 className={styles.heading}>
@@ -12,9 +28,12 @@ export default function OrderSection() {
       </h1>
 
       <div className={styles.row}>
-        <div className={styles.image}>
-          <Image src={orderImage.source} alt={orderImage.alt} priority={false} />
-        </div>
+        <figure className={styles.image}>
+          <Image // eslint-disable-next-line react-hooks/rules-of-hooks
+            {...useNextSanityImage(client, item.image.asset._ref)}
+            alt={item.image.alt}
+            priority={false} />
+        </figure>
 
         <form action="">
           <div className={styles.inputBox}>

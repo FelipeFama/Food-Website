@@ -1,24 +1,45 @@
 import Image from "next/image";
-import { home } from "@/data/illustrations";
 import ButtonComponent from "@/components/buttons/ButtonSections";
 import styles from "./style.module.scss";
+import { useNextSanityImage } from "next-sanity-image";
+import { client } from "@/sanity";
 
-export default function HomeSection() {
+
+interface HomeProps {
+  home: Home[];
+}
+
+interface Home {
+  title: string;
+  description: string;
+  image: {
+    alt: string;
+    asset: {
+      _ref: string;
+    };
+  };
+}
+
+export default function HomeSection({ home }: HomeProps) {
+  const item = home[0];
+
   return (
     <section className={styles.home} id="home">
       <article className={styles.content}>
-        <h3>food made with love</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas
-          accusamus tempore temporibus rem amet laudantium animi optio
-          voluptatum. Natus obcaecati unde porro nostrum ipsam itaque impedit
-          incidunt rem quisquam eos!
-        </p>
+        <h3>{item.title}</h3>
+        <p>{item.description}</p>
         <ButtonComponent>Order Now</ButtonComponent>
       </article>
-
       <figure className={styles.image}>
-        <Image src={home.source} alt={home.alt} width={500} height={500} priority={false} />
+        <Image
+          className={styles.image}
+          // eslint-disable-next-line react-hooks/rules-of-hooks
+          {...useNextSanityImage(client, item.image.asset._ref)}
+          alt={item.image.alt}
+          width={500}
+          height={500}
+          priority={false}
+        />
       </figure>
     </section>
   );

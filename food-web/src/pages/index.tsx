@@ -14,19 +14,23 @@ import BackToTopButton from "@/components/buttons/BackToTopButton";
 import Loader from "@/components/Layout/Loader";
 
 interface Props {
+  home: any;
   speciality: any;
   popular: any;
   steps: any;
   gallery: any;
   review: any;
+  order: any;
 }
 
 export default function Home({
+  home,
   speciality,
   popular,
   steps,
   gallery,
   review,
+  order
 }: Props) {
   return (
     <>
@@ -38,13 +42,13 @@ export default function Home({
       </Head>
       <Header />
       <main>
-        <HomeSection />
+        <HomeSection home={home} />
         <SpecialitySection speciality={speciality} />
         <PopularSection popular={popular} />
         <StepsSection steps={steps} />
         <GallerySection gallery={gallery} />
         <ReviewSection review={review} />
-        <OrderSection />
+        <OrderSection order={order} />
       </main>
       <Footer />
       <BackToTopButton />
@@ -54,6 +58,9 @@ export default function Home({
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
+  const home = await client.fetch(
+    `*[_type == "home"]`
+  );
   const speciality = await client.fetch(
     `*[_type == "speciality"] | order(_createdAt desc)`
   );
@@ -69,14 +76,19 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const review = await client.fetch(
     `*[_type == "review"] | order(_createdAt desc)`
   );
+  const order = await client.fetch(
+    `*[_type == "order"]`
+  );
 
   return {
     props: {
+      home,
       speciality,
       popular,
       steps,
       gallery,
       review,
+      order
     },
   };
 };

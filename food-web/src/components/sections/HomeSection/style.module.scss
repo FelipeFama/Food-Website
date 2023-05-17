@@ -5,7 +5,7 @@
   @include mixins.flex-wrap;
   min-height: 100vh;
   align-items: center;
-  background: url(../../../assets/home-bg.jpg) no-repeat;
+  background: url(/home-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   & .content {

@@ -32,6 +32,7 @@ yarn run dev
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![NextJs](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![Sanity](https://img.shields.io/badge/Sanity-f03f2e?style=for-the-badge&logo=sahibinden&logoColor=white)
 
 ## :book: Project Information
 - Food website tutorial
@@ -49,7 +50,5 @@ yarn run dev
    My links:
    <p><a href="https://github.com/FelipeFama">My Github</a></p>
    
-
-   
-
+sahibinden
 

@@ -14,6 +14,7 @@ import BackToTopButton from "@/components/buttons/BackToTopButton";
 import Loader from "@/components/Layout/Loader";
 
 interface Props {
+  header: any;
   home: any;
   speciality: any;
   popular: any;
@@ -21,17 +22,23 @@ interface Props {
   gallery: any;
   review: any;
   order: any;
+  footer: any;
+  loader: any;
 }
 
 export default function Home({
+  header,
   home,
   speciality,
   popular,
   steps,
   gallery,
   review,
-  order
+  order,
+  footer,
+  loader
 }: Props) {
+
   return (
     <>
       <Head>
@@ -40,7 +47,7 @@ export default function Home({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/foodicon.ico" />
       </Head>
-      <Header />
+      <Header header={header} />
       <main>
         <HomeSection home={home} />
         <SpecialitySection speciality={speciality} />
@@ -50,14 +57,17 @@ export default function Home({
         <ReviewSection review={review} />
         <OrderSection order={order} />
       </main>
-      <Footer />
+      <Footer footer={footer} />
       <BackToTopButton />
-      <Loader />
+      <Loader loader={loader} />
     </>
   );
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
+  const header = await client.fetch(
+    `*[_type == "header"] | order(_createdAt asc)`
+  );
   const home = await client.fetch(
     `*[_type == "home"]`
   );
@@ -79,16 +89,25 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const order = await client.fetch(
     `*[_type == "order"]`
   );
+  const footer = await client.fetch(
+    `*[_type == "footer"] | order(_createdAt asc)`
+  );
+  const loader = await client.fetch(
+    `*[_type == "loader"]`
+  );
 
   return {
     props: {
+      header,
       home,
       speciality,
       popular,
       steps,
       gallery,
       review,
-      order
+      order,
+      footer,
+      loader
     },
   };
 };

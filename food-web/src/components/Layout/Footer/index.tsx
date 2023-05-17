@@ -2,15 +2,22 @@ import React from "react";
 import styles from "./style.module.scss";
 import ButtonComponent from "../../buttons/ButtonSections";
 
-export default function Footer() {
+interface FooterProps {
+  footer: Footer[];
+}
+
+interface Footer {
+  _id: string;
+  span: string;
+}
+
+export default function Footer({ footer }: FooterProps) {
   return (
     <footer className={styles.footer}>
       <div className={styles.share}>
-        <ButtonComponent>facebook</ButtonComponent>
-        <ButtonComponent>twitter</ButtonComponent>
-        <ButtonComponent>instagram</ButtonComponent>
-        <ButtonComponent>pinterest</ButtonComponent>
-        <ButtonComponent>linkedin</ButtonComponent>
+        {footer.map((item: Footer) => (
+          <ButtonComponent key={item._id}>{item.span}</ButtonComponent>
+        ))}
       </div>
 
       <h1 className={styles.credit}>

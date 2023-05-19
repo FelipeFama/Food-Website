@@ -1,5 +1,5 @@
 import { client } from "@/lib/sanity";
-import { Props } from "@/pages";
+import { Props } from "@/types";
 import { GetStaticProps } from "next";
 
 export const getStaticProps: GetStaticProps<Props> = async () => {

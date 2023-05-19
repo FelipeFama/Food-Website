@@ -11,19 +11,7 @@ import Footer from "@/components/Layout/Footer";
 import BackToTopButton from "@/components/buttons/BackToTopButton";
 import Loader from "@/components/Layout/Loader";
 import { getStaticProps } from "@/utils/fetchData";
-
-export interface Props {
-  header: any;
-  home: any;
-  speciality: any;
-  popular: any;
-  steps: any;
-  gallery: any;
-  review: any;
-  order: any;
-  footer: any;
-  loader: any;
-}
+import { Props } from "@/types";
 
 export default function Home({
   header,

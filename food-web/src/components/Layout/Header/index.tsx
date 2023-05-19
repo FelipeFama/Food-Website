@@ -1,22 +1,16 @@
 import { useState } from "react";
 import { FaBars, FaTimes, FaUtensils } from "react-icons/fa";
 import styles from "./style.module.scss";
+import { Header as HeaderComponent } from "@/types/layout/header";
 
 interface HeaderProps {
-  header: Header[];
-}
-
-interface Header {
-  _id: string;
-  link: string;
-  span: string;
+  header: HeaderComponent[];
 }
 
 export default function Header({ header }: HeaderProps) {
   const [navbarActive, setNavbarActive] = useState(false);
 
   const toggleNavbar = () => setNavbarActive(!navbarActive);
-
 
   return (
     <header className={styles.header}>
@@ -30,8 +24,14 @@ export default function Header({ header }: HeaderProps) {
       </div>
 
       <nav className={`${styles.navbar} ${navbarActive ? styles.active : ""}`}>
-        {header.map((item: Header) => (
-          <a key={item._id} href={item.link} onClick={() => setNavbarActive(false)}>{item.span}</a>
+        {header.map((item: HeaderComponent) => (
+          <a
+            key={item._id}
+            href={item.link}
+            onClick={() => setNavbarActive(false)}
+          >
+            {item.span}
+          </a>
         ))}
       </nav>
     </header>

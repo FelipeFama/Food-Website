@@ -3,20 +3,11 @@ import styles from "./style.module.scss";
 import Image from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "@/sanity";
+import { Loader as LoaderComponent } from "@/types/layout/loader";
 
 
 interface LoaderProps {
-  loader: Loader[];
-}
-
-interface Loader {
-  _id: string;
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
+  loader: LoaderComponent[];
 }
 
 export default function Loader({ loader }: LoaderProps) {

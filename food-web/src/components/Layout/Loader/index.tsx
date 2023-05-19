@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./style.module.scss";
 import Image from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
-import { client } from "@/sanity";
+import { client } from "@/lib/sanity";
 import { Loader as LoaderComponent } from "@/types/layout/loader";
 
 

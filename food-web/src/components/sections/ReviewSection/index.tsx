@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./style.module.scss";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { useNextSanityImage } from "next-sanity-image";
-import { client } from "@/sanity";
+import { client } from "@/lib/sanity";
 import { Review as ReviewComponent } from "@/types/sections/review";
 
 interface ReviewProps {

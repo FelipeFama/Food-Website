@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "./style.module.scss";
 import { useNextSanityImage } from "next-sanity-image";
-import { client } from "@/sanity";
+import { client } from "@/lib/sanity";
 import { Steps as StepsComponent } from "@/types/sections/steps";
 
 interface StepsProps {

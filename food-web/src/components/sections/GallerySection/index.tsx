@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./style.module.scss";
 import ButtonComponent from "@/components/buttons/ButtonSections";
 import { useNextSanityImage } from "next-sanity-image";
-import { client } from "@/sanity";
+import { client } from "@/lib/sanity";
 import { Gallery as GalleryComponent } from "@/types/sections/gallery";
 
 interface GalleryProps {

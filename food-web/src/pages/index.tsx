@@ -1,4 +1,4 @@
-import { client } from "@/sanity";
+import { client } from "@/lib/sanity";
 import { GetStaticProps } from "next";
 import Header from "@/components/Layout/Header";
 import Head from "next/head";

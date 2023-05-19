@@ -4,18 +4,10 @@ import ButtonComponent from "@/components/buttons/ButtonSections";
 import styles from "./style.module.scss";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "@/sanity";
+import { Order as OrderComponent } from "@/types/sections/order";
 
 interface OrderProps {
-  order: Order[];
-}
-
-interface Order {
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
+  order: OrderComponent[];
 }
 
 export default function OrderSection({ order }: OrderProps) {

@@ -3,20 +3,10 @@ import Image from "next/image";
 import styles from "./style.module.scss";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "@/sanity";
+import { Steps as StepsComponent } from "@/types/sections/steps";
 
 interface StepsProps {
-  steps: Steps[];
-}
-
-interface Steps {
-  _id: string;
-  title: string;
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
+  steps: StepsComponent[];
 }
 
 export default function StepsSection({ steps }: StepsProps) {
@@ -27,7 +17,7 @@ export default function StepsSection({ steps }: StepsProps) {
       </h1>
 
       <div className={styles.stepsContainer}>
-        {steps.map((item: Steps) => (
+        {steps.map((item: StepsComponent) => (
           <article key={item._id} className={styles.box}>
             {item.image && (
               <Image

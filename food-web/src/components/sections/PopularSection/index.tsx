@@ -5,20 +5,10 @@ import { FaStar, FaRegStar } from "react-icons/fa";
 import ButtonComponent from "@/components/buttons/ButtonSections";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "@/sanity";
-interface PopularProps {
-  popular: Popular[];
-}
+import { Popular as PopularComponent } from "@/types/sections/popular";
 
-interface Popular {
-  _id: string;
-  title: string;
-  span: string;
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
+interface PopularProps {
+  popular: PopularComponent[];
 }
 
 export default function PopularSection({ popular }: PopularProps) {
@@ -28,7 +18,7 @@ export default function PopularSection({ popular }: PopularProps) {
         most <span>popular</span> foods
       </h1>
       <div className={styles.boxContainer}>
-        {popular.map((item: Popular) => (
+        {popular.map((item: PopularComponent) => (
           <article key={item._id} className={styles.box}>
             <span className={styles.price}>{item.span}</span>
             {item.image && (

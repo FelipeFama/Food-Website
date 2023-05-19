@@ -2,27 +2,12 @@ import Image from "next/image";
 import styles from "./style.module.scss";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "@/sanity";
+import { Speciality as SpecialityComponent } from "@/types/sections/speciality";
+
 interface SpecialityProps {
-  speciality: Speciality[];
+  speciality: SpecialityComponent[];
 }
 
-interface Speciality {
-  _id: string;
-  title: string;
-  description: string;
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
-  icon: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
-}
 
 export default function SpecialitySection({ speciality }: SpecialityProps) {
   return (
@@ -31,7 +16,7 @@ export default function SpecialitySection({ speciality }: SpecialityProps) {
         our <span>speciality</span>
       </h1>
       <div className={styles.boxContainer}>
-        {speciality.map((item: Speciality) => (
+        {speciality.map((item: SpecialityComponent) => (
           <article key={item._id} className={styles.box}>
             {item.image && (
               <Image

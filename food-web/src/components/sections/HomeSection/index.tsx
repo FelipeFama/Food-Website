@@ -3,21 +3,10 @@ import ButtonComponent from "@/components/buttons/ButtonSections";
 import styles from "./style.module.scss";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "@/sanity";
-
+import { Home as HomeComponent } from "@/types/sections/home";
 
 interface HomeProps {
-  home: Home[];
-}
-
-interface Home {
-  title: string;
-  description: string;
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
+  home: HomeComponent[];
 }
 
 export default function HomeSection({ home }: HomeProps) {

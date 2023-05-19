@@ -4,21 +4,10 @@ import styles from "./style.module.scss";
 import ButtonComponent from "@/components/buttons/ButtonSections";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "@/sanity";
+import { Gallery as GalleryComponent } from "@/types/sections/gallery";
 
 interface GalleryProps {
-  gallery: Gallery[];
-}
-
-interface Gallery {
-  _id: string;
-  title: string;
-  description: string;
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
+  gallery: GalleryComponent[];
 }
 
 export default function GallerySection({ gallery }: GalleryProps) {
@@ -28,7 +17,7 @@ export default function GallerySection({ gallery }: GalleryProps) {
         Our food <span>gallery</span>
       </h1>
       <div className={styles.boxContainer}>
-        {gallery.map((item: Gallery) => (
+        {gallery.map((item: GalleryComponent) => (
           <article key={item._id} className={styles.box}>
             {item.image && (
               <Image

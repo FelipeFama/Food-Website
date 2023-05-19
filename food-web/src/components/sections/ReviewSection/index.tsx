@@ -4,21 +4,10 @@ import styles from "./style.module.scss";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "@/sanity";
+import { Review as ReviewComponent } from "@/types/sections/review";
 
 interface ReviewProps {
-  review: Review[];
-}
-
-interface Review {
-  _id: string;
-  title: string;
-  description: string;
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
+  review: ReviewComponent[];
 }
 
 export default function ReviewSection({ review }: ReviewProps) {
@@ -28,7 +17,7 @@ export default function ReviewSection({ review }: ReviewProps) {
         our customers <span>reviews</span>
       </h1>
       <div className={styles.boxContainer}>
-        {review.map((item: Review) => (
+        {review.map((item: ReviewComponent) => (
           <article key={item._id} className={styles.box}>
             {item.image && (
               <Image

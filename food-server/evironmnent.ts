@@ -1,3 +1,2 @@
-export const projectId = process.env.SANITY_STUDIO_ID || 'ja152qjd'
-
-export const dataset = process.env.SANITY_STUDIO_DATASET || 'dataset'
+export const projectId = process.env.SANITY_STUDIO_PROJECT_ID!
+export const dataset = process.env.SANITY_STUDIO_DATASET!

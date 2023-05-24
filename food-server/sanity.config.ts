@@ -7,10 +7,8 @@ import {dataset, projectId} from './evironmnent'
 export default defineConfig({
   name: 'default',
   title: 'food-server',
-
   projectId,
   dataset,
-
   plugins: [deskTool(), visionTool()],
 
   schema: {

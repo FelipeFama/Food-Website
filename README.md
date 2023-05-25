@@ -58,6 +58,3 @@ Back-end:
    My links:
    <p><a href="https://github.com/FelipeFama">My Github</a></p>
    
-
-![food-website-mobile ](https://github.com/FelipeFama/Food-Website/assets/91050670/d3abc3c1-ab0c-4927-b22d-62de9fdf220d)
-

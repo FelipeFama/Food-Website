@@ -30,10 +30,15 @@ yarn run dev
 ```
 
 ## :wrench: Technologies Used
+Front-End:
+
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![NextJs](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+
+Back-end:
+
 ![Sanity](https://img.shields.io/badge/Sanity-f03f2e?style=for-the-badge&logo=sahibinden&logoColor=white)
 
 ## :book: Project Information
@@ -47,6 +52,7 @@ yarn run dev
 
 - Media queries and responsivity
 
+- Frontend connection with cms sanity
 
 ## :bulb: Author: Lipeh Fama
    My links:

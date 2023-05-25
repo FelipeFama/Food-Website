@@ -9,8 +9,8 @@
     <td>Desktop Version</td>
   </tr>
   <tr valign="top">
-    <td> <img src="https://user-images.githubusercontent.com/91050670/229861805-83da1c6e-045f-42b0-a3e3-eebab6881eb2.png" alt="mobile version" widht=450 height=400  /></td>
-    <td><img src="https://user-images.githubusercontent.com/91050670/229860513-578d6718-1381-4e9f-a2a0-24d78acf14ae.png" alt="desktop version" width=800 height=400 /></td>
+    <td> <img src="https://github.com/FelipeFama/Food-Website/assets/91050670/d3abc3c1-ab0c-4927-b22d-62de9fdf220d" alt="mobile version" width=450 height=580  /></td>
+    <td><img src="https://github.com/FelipeFama/Food-Website/assets/91050670/90d0f9f6-70c1-47bc-a798-a32eb459037b" alt="desktop version" width=1500 height=580 /></td>
   </tr>
 </table>
 
@@ -58,4 +58,6 @@ Back-end:
    My links:
    <p><a href="https://github.com/FelipeFama">My Github</a></p>
    
+
+![food-website-mobile ](https://github.com/FelipeFama/Food-Website/assets/91050670/d3abc3c1-ab0c-4927-b22d-62de9fdf220d)
 

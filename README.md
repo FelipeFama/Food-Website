@@ -17,6 +17,8 @@
 
 ## :rocket: Run Project
 
+### Front and Back
+
 ```bash
 npm install
 npm run dev

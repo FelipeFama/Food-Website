@@ -1,4 +1,3 @@
-import Header from "@/components/Layout/Header";
 import Head from "next/head";
 import HomeSection from "@/components/sections/HomeSection";
 import SpecialitySection from "@/components/sections/SpecialitySection";
@@ -7,11 +6,9 @@ import StepsSection from "@/components/sections/StepsSection";
 import GallerySection from "@/components/sections/GallerySection";
 import ReviewSection from "@/components/sections/ReviewSection";
 import OrderSection from "@/components/sections/OrderSection";
-import Footer from "@/components/Layout/Footer";
-import BackToTopButton from "@/components/buttons/BackToTopButton";
-import Loader from "@/components/Layout/Loader";
-import { getStaticProps } from "@/utils/fetchData";
+import { getStaticProps } from "@/lib/fetchData";
 import { Props } from "@/types";
+import Layout from "@/layout";
 
 export default function Home({
   header,
@@ -23,9 +20,8 @@ export default function Home({
   review,
   order,
   footer,
-  loader
+  loader,
 }: Props) {
-
   return (
     <>
       <Head>
@@ -34,8 +30,8 @@ export default function Home({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/foodicon.ico" />
       </Head>
-      <Header header={header} />
-      <main>
+
+      <Layout header={header} footer={footer} loader={loader}>
         <HomeSection home={home} />
         <SpecialitySection speciality={speciality} />
         <PopularSection popular={popular} />
@@ -43,12 +39,9 @@ export default function Home({
         <GallerySection gallery={gallery} />
         <ReviewSection review={review} />
         <OrderSection order={order} />
-      </main>
-      <Footer footer={footer} />
-      <BackToTopButton />
-      <Loader loader={loader} />
+      </Layout>
     </>
   );
 }
 
-export { getStaticProps }
+export { getStaticProps };

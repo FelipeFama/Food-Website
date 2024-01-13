@@ -29,7 +29,7 @@ export default function GallerySection({ gallery }: GalleryProps) {
               />
             )}
             <div className={styles.content}>
-              <h3>{item.title}</h3>
+              <h2>{item.title}</h2>
               <p>{item.description}</p>
               <ButtonComponent>Order Now</ButtonComponent>
             </div>

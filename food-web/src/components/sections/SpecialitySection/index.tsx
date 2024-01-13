@@ -8,7 +8,6 @@ interface SpecialityProps {
   speciality: SpecialityComponent[];
 }
 
-
 export default function SpecialitySection({ speciality }: SpecialityProps) {
   return (
     <section className={styles.speciality} id="speciality">
@@ -36,7 +35,7 @@ export default function SpecialitySection({ speciality }: SpecialityProps) {
                   priority={false}
                 />
               )}
-              <h3>{item.title}</h3>
+              <h2>{item.title}</h2>
               <p>{item.description}</p>
             </div>
           </article>

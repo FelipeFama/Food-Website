@@ -30,7 +30,7 @@ export default function PopularSection({ popular }: PopularProps) {
                 priority={false}
               />
             )}
-            <h3>{item.title}</h3>
+            <h2>{item.title}</h2>
             <div className={styles.stars}>
               <FaStar></FaStar>
               <FaStar></FaStar>

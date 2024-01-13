@@ -28,7 +28,7 @@ export default function StepsSection({ steps }: StepsProps) {
                 priority={false}
               />
             )}
-            <h3>{item.title}</h3>
+            <h2>{item.title}</h2>
           </article>
         ))}
       </div>

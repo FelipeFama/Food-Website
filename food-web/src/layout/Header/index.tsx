@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaBars, FaTimes, FaUtensils } from "react-icons/fa";
 import styles from "./style.module.scss";
 import { Header as HeaderComponent } from "@/types/layout/header";
+import Link from "next/link";
 
 interface HeaderProps {
   header: HeaderComponent[];
@@ -14,10 +15,10 @@ export default function Header({ header }: HeaderProps) {
 
   return (
     <header className={styles.header}>
-      <a href="#" className={styles.logo}>
+      <Link href="#" className={styles.logo}>
         <FaUtensils></FaUtensils>
         Food
-      </a>
+      </Link>
 
       <div className={styles.menuBar} onClick={toggleNavbar}>
         {navbarActive ? <FaTimes /> : <FaBars />}
@@ -25,13 +26,12 @@ export default function Header({ header }: HeaderProps) {
 
       <nav className={`${styles.navbar} ${navbarActive ? styles.active : ""}`}>
         {header.map((item: HeaderComponent) => (
-          <a
+          <Link
             key={item._id}
             href={item.link}
-            onClick={() => setNavbarActive(false)}
-          >
+            onClick={() => setNavbarActive(false)}>
             {item.span}
-          </a>
+          </Link>
         ))}
       </nav>
     </header>

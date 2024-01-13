@@ -15,7 +15,7 @@ export default function HomeSection({ home }: HomeProps) {
   return (
     <section className={styles.home} id="home">
       <article className={styles.content}>
-        <h3>{item.title}</h3>
+        <h2>{item.title}</h2>
         <p>{item.description}</p>
         <ButtonComponent>Order Now</ButtonComponent>
       </article>

@@ -25,12 +25,20 @@ export default function Home({
   return (
     <>
       <Head>
-        <title>Food Restaurant Website</title>
+        <meta charSet="UTF-8" />
         <meta name="description" content="Food Restaurant Website" />
+        <meta name="keywords" content="Food Website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/foodicon.ico" />
+        <meta name="theme-color" content="#000" />
+        <title>Food Restaurant Website</title>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="icons/foodicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="icons/apple-touch-icon.png"
+        />
       </Head>
-
       <Layout header={header} footer={footer} loader={loader}>
         <HomeSection home={home} />
         <SpecialitySection speciality={speciality} />

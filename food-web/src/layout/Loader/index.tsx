@@ -5,22 +5,20 @@ import { useNextSanityImage } from "next-sanity-image";
 import { client } from "@/lib/sanity";
 import { Loader as LoaderComponent } from "@/types/layout/loader";
 
-
 interface LoaderProps {
   loader: LoaderComponent[];
 }
 
 export default function Loader({ loader }: LoaderProps) {
-
-  const item = loader[0]
+  const item = loader[0];
 
   useEffect(() => {
     const loaderContainer = document.querySelector(
-      `.${styles["loaderContainer"]}`
+      `.${styles.loaderContainer}`,
     );
     const fadeOutInterval = setInterval(() => {
       if (loaderContainer) {
-        loaderContainer.classList.add(styles["fadeOut"]);
+        loaderContainer.classList.add(styles.fadeOut);
         clearInterval(fadeOutInterval);
       }
     }, 3000);
@@ -29,7 +27,7 @@ export default function Loader({ loader }: LoaderProps) {
   }, []);
 
   return (
-    <figure className={styles["loaderContainer"]}>
+    <figure className={styles.loaderContainer}>
       {item.image && (
         <Image
           className={styles.image}

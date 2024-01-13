@@ -29,7 +29,8 @@ export default function Header({ header }: HeaderProps) {
           <Link
             key={item._id}
             href={item.link}
-            onClick={() => setNavbarActive(false)}>
+            onClick={() => setNavbarActive(false)}
+          >
             {item.span}
           </Link>
         ))}

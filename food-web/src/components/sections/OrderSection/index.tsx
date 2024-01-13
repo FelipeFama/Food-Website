@@ -24,7 +24,8 @@ export default function OrderSection({ order }: OrderProps) {
           <Image // eslint-disable-next-line react-hooks/rules-of-hooks
             {...useNextSanityImage(client, item.image.asset._ref)}
             alt={item.image.alt}
-            priority={false} />
+            priority={false}
+          />
         </figure>
 
         <form action="">

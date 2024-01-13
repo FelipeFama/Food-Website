@@ -31,10 +31,11 @@ export default function BackToTopButton() {
     <>
       <a
         href="#home"
-        className={`${styles["scrollTop"]}`}
+        className={`${styles.scrollTop}`}
         ref={scrollTopButtonRef}
         onClick={handleScrollTop}
-        aria-label="home">
+        aria-label="home"
+      >
         <FaAngleUp />
       </a>
     </>

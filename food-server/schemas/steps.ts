@@ -1,20 +1,20 @@
 export default {
-  name: 'steps',
-  title: 'Steps',
-  type: 'document',
+  name: "steps",
+  title: "Steps",
+  type: "document",
   fields: [
-    {name: 'title', title: 'Title', type: 'string'},
+    { name: "title", title: "Title", type: "string" },
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
+      name: "image",
+      title: "Image",
+      type: "image",
       fields: [
         {
-          name: 'alt',
-          title: 'Alt',
-          type: 'string',
+          name: "alt",
+          title: "Alt",
+          type: "string",
         },
       ],
     },
   ],
-}
+};

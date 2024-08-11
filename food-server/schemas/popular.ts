@@ -1,21 +1,21 @@
 export default {
-  name: 'popular',
-  title: 'Popular',
-  type: 'document',
+  name: "popular",
+  title: "Popular",
+  type: "document",
   fields: [
-    {name: 'span', title: 'Span', type: 'string'},
-    {name: 'title', title: 'Title', type: 'string'},
+    { name: "span", title: "Span", type: "string" },
+    { name: "title", title: "Title", type: "string" },
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
+      name: "image",
+      title: "Image",
+      type: "image",
       fields: [
         {
-          name: 'alt',
-          title: 'Alt',
-          type: 'string',
+          name: "alt",
+          title: "Alt",
+          type: "string",
         },
       ],
     },
   ],
-}
+};

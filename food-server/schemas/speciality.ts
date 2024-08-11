@@ -1,33 +1,33 @@
 export default {
-  name: 'speciality',
-  title: 'Speciality',
-  type: 'document',
+  name: "speciality",
+  title: "Speciality",
+  type: "document",
   fields: [
-    {name: 'title', title: 'Title', type: 'string'},
-    {name: 'description', title: 'Description', type: 'text'},
+    { name: "title", title: "Title", type: "string" },
+    { name: "description", title: "Description", type: "text" },
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
+      name: "image",
+      title: "Image",
+      type: "image",
       fields: [
         {
-          name: 'alt',
-          title: 'Alt',
-          type: 'string',
+          name: "alt",
+          title: "Alt",
+          type: "string",
         },
       ],
     },
     {
-      name: 'icon',
-      title: 'Icon',
-      type: 'image',
+      name: "icon",
+      title: "Icon",
+      type: "image",
       fields: [
         {
-          name: 'alt',
-          title: 'Alt',
-          type: 'string',
+          name: "alt",
+          title: "Alt",
+          type: "string",
         },
       ],
     },
   ],
-}
+};

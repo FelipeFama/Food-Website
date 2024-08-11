@@ -1,19 +1,19 @@
 export default {
-  name: 'loader',
-  title: 'Loader',
-  type: 'document',
+  name: "loader",
+  title: "Loader",
+  type: "document",
   fields: [
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
+      name: "image",
+      title: "Image",
+      type: "image",
       fields: [
         {
-          name: 'alt',
-          title: 'Alt',
-          type: 'string',
+          name: "alt",
+          title: "Alt",
+          type: "string",
         },
       ],
     },
   ],
-}
+};

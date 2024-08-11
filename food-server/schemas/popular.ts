@@ -1,11 +1,21 @@
+import { defineField } from "sanity";
+
 export default {
   name: "popular",
   title: "Popular",
   type: "document",
   fields: [
-    { name: "span", title: "Span", type: "string" },
-    { name: "title", title: "Title", type: "string" },
-    {
+    defineField({
+      name: "span",
+      title: "Span",
+      type: "string",
+    }),
+    defineField({
+      name: "title",
+      title: "Title",
+      type: "string",
+    }),
+    defineField({
       name: "image",
       title: "Image",
       type: "image",
@@ -16,6 +26,6 @@ export default {
           type: "string",
         },
       ],
-    },
+    }),
   ],
 };

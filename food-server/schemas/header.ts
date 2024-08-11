@@ -1,9 +1,19 @@
+import { defineField } from "sanity";
+
 export default {
   name: "header",
   title: "Header",
   type: "document",
   fields: [
-    { name: "link", title: "Link", type: "string" },
-    { name: "span", title: "Span", type: "string" },
+    defineField({
+      name: "link",
+      title: "Link",
+      type: "string",
+    }),
+    defineField({
+      name: "span",
+      title: "Span",
+      type: "string",
+    }),
   ],
 };
